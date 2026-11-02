@@ -22,6 +22,7 @@ public class RaycastScript : MonoBehaviour
         if(Physics.Raycast(ray, out hit, 100, layerMask))
         {
             text.text = hit.collider.gameObject.name;
+            hit.transform.GetComponent<Renderer>().material.color = Color.blue; 
         }
     }
 }
